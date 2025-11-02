@@ -1,0 +1,431 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --teal: #0E6251;
+   --orange: #F4A300;
+   --cream: #FFF8E7;
+   --dark: #1a1a1a;
+   --gray: #666;
+   --light-gray: #f5f5f5;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   line-height: 1.6;
+   color: var(--dark);
+   background: #fff;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* ========== HERO SLIDER ========== */
+.hero-slider {
+   position: relative;
+   height: 70vh;
+   margin-top: 70px;
+   overflow: hidden;
+}
+
+.hero-slide {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+   opacity: 1;
+}
+
+.hero-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(rgba(14, 98, 81, 0.4), rgba(14, 98, 81, 0.7));
+}
+
+.hero-content {
+   position: relative;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-align: center;
+   padding: 2rem;
+}
+
+.hero-content h1 {
+   font-size: 4rem;
+   margin-bottom: 1rem;
+   animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+   font-size: 1.5rem;
+   animation: fadeInUp 1s ease 0.3s backwards;
+}
+
+/* Slider Controls */
+.slider-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: rgba(255, 255, 255, 0.3);
+   color: white;
+   border: none;
+   font-size: 3rem;
+   padding: 1rem 1.5rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   z-index: 10;
+}
+
+.slider-btn:hover {
+   background: rgba(255, 255, 255, 0.5);
+}
+
+.prev-btn {
+   left: 20px;
+}
+
+.next-btn {
+   right: 20px;
+}
+
+/* Slider Dots */
+.slider-dots {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+   z-index: 10;
+}
+
+.dot {
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.5);
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+   background: white;
+   transform: scale(1.2);
+}
+
+/* ========== MAIN CONTENT ========== */
+.destination-container {
+   max-width: 1000px;
+   margin: 3rem auto;
+   padding: 0 2rem;
+}
+
+.info-section {
+   margin-bottom: 4rem;
+   animation: fadeInUp 0.6s ease;
+}
+
+.info-section h2 {
+   font-size: 2rem;
+   color: var(--teal);
+   margin-bottom: 1.5rem;
+   padding-bottom: 0.5rem;
+   border-bottom: 3px solid var(--orange);
+}
+
+.info-section p {
+   font-size: 1.1rem;
+   line-height: 1.8;
+   color: var(--gray);
+   margin-bottom: 1rem;
+}
+
+/* ========== TRAVEL NOTES ========== */
+.travel-notes {
+   list-style: none;
+   padding: 0;
+}
+
+.travel-notes li {
+   padding: 1rem;
+   margin-bottom: 1rem;
+   background: var(--cream);
+   border-left: 4px solid var(--orange);
+   border-radius: 8px;
+   transition: all 0.3s ease;
+}
+
+.travel-notes li:hover {
+   transform: translateX(10px);
+   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.travel-notes strong {
+   color: var(--teal);
+}
+
+/* ========== ATTRACTIONS GRID ========== */
+.attractions-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2rem;
+   margin-top: 2rem;
+}
+
+.attraction-card {
+   background: var(--cream);
+   padding: 1.5rem;
+   border-radius: 12px;
+   transition: all 0.3s ease;
+   border-left: 4px solid var(--teal);
+}
+
+.attraction-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+   border-left-color: var(--orange);
+}
+
+.attraction-card h3 {
+   color: var(--teal);
+   margin-bottom: 0.5rem;
+   font-size: 1.3rem;
+}
+
+.attraction-card .distance {
+   color: var(--orange);
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+   font-size: 0.9rem;
+}
+
+.attraction-card p {
+   color: var(--gray);
+   font-size: 1rem;
+}
+
+/* ========== DISTANCE INFO ========== */
+.distance-info {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+.distance-item {
+   display: flex;
+   align-items: flex-start;
+   gap: 1rem;
+   padding: 1.5rem;
+   background: var(--cream);
+   border-radius: 12px;
+   transition: all 0.3s ease;
+}
+
+.distance-item:hover {
+   transform: translateX(10px);
+   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.distance-item .icon {
+   font-size: 2rem;
+   min-width: 50px;
+}
+
+.distance-item h3 {
+   color: var(--teal);
+   margin-bottom: 0.5rem;
+   font-size: 1.1rem;
+}
+
+.distance-item p {
+   color: var(--gray);
+   margin: 0;
+}
+
+/* ========== RESTAURANTS ========== */
+.restaurant-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+.restaurant-item {
+   padding: 1.5rem;
+   background: white;
+   border: 2px solid var(--cream);
+   border-radius: 12px;
+   transition: all 0.3s ease;
+}
+
+.restaurant-item:hover {
+   border-color: var(--orange);
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.restaurant-item h3 {
+   color: var(--teal);
+   margin-bottom: 0.5rem;
+   font-size: 1.2rem;
+}
+
+.restaurant-item p {
+   color: var(--gray);
+   margin: 0;
+}
+
+/* ========== ACCOMMODATION ========== */
+.accommodation-category {
+   color: var(--teal);
+   margin: 2rem 0 1rem;
+   font-size: 1.5rem;
+}
+
+.accommodation-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+.hotel-item {
+   padding: 1.5rem;
+   background: var(--cream);
+   border-radius: 12px;
+   border-left: 4px solid var(--teal);
+   transition: all 0.3s ease;
+}
+
+.hotel-item:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+   border-left-color: var(--orange);
+}
+
+.hotel-item h4 {
+   color: var(--teal);
+   margin-bottom: 0.5rem;
+   font-size: 1.2rem;
+}
+
+.hotel-item p {
+   color: var(--gray);
+   margin: 0;
+   font-size: 0.95rem;
+}
+
+/* ========== CTA SECTION ========== */
+.cta-section {
+   text-align: center;
+   padding: 4rem 2rem;
+   background: linear-gradient(135deg, var(--teal), #0a5043);
+   border-radius: 20px;
+   color: white;
+   margin: 4rem 0;
+}
+
+.cta-section h2 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: white;
+   border: none;
+}
+
+.cta-section p {
+   font-size: 1.2rem;
+   margin-bottom: 2rem;
+   color: var(--cream);
+}
+
+.btn-cta {
+   display: inline-block;
+   padding: 1.2rem 3rem;
+   background: var(--orange);
+   color: white;
+   border-radius: 50px;
+   font-weight: 600;
+   font-size: 1.1rem;
+   transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+   background: white;
+   color: var(--teal);
+   transform: translateY(-5px);
+   box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+   .hero-content h1 {
+       font-size: 2.5rem;
+   }
+
+   .hero-content p {
+       font-size: 1.2rem;
+   }
+
+   .slider-btn {
+       font-size: 2rem;
+       padding: 0.5rem 1rem;
+   }
+
+   .prev-btn {
+       left: 10px;
+   }
+
+   .next-btn {
+       right: 10px;
+   }
+
+   .info-section h2 {
+       font-size: 1.5rem;
+   }
+
+   .attractions-grid,
+   .restaurant-list,
+   .accommodation-list {
+       grid-template-columns: 1fr;
+   }
+
+   .cta-section h2 {
+       font-size: 2rem;
+   }
+
+   .cta-section p {
+       font-size: 1rem;
+   }
+}

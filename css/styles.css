@@ -5,12 +5,12 @@
 }
 
 :root {
-   --teal: #0E6251;
-   --orange: #F4A300;
-   --cream: #FFF8E7;
-   --dark: #1a1a1a;
-   --gray: #666;
-   --light-gray: #f5f5f5;
+   --primary: #2C3E50;      /* Deep navy blue - main brand color */
+   --accent: #E74C3C;       /* Vibrant coral red - accent color */
+   --light: #ECF0F1;        /* Soft light gray - backgrounds */
+   --dark: #1a1a1a;         /* Dark text */
+   --gray: #7F8C8D;         /* Medium gray - secondary text */
+   --light-gray: #f8f9fa;   /* Very light gray - subtle backgrounds */
 }
 
 
@@ -40,7 +40,7 @@ a {
    position: fixed;
    top: 0;
    width: 100%;
-   background: rgba(14, 98, 81, 0.95);
+   background: rgba(44, 62, 80, 0.95);
    backdrop-filter: blur(10px);
    padding: 1rem 0;
    z-index: 1000;
@@ -63,7 +63,7 @@ a {
 .logo {
    font-size: 1.5rem;
    font-weight: 700;
-   color: var(--cream);
+   color: var(--light);
    display: flex;
    align-items: center;
    gap: 0.5rem;
@@ -76,7 +76,7 @@ a {
 }
 
 .nav-menu a {
-   color: var(--cream);
+   color: var(--light);
    font-weight: 500;
    transition: color 0.3s ease;
    position: relative;
@@ -84,7 +84,7 @@ a {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-   color: var(--orange);
+   color: var(--accent);
 }
 
 .nav-menu a.active::after {
@@ -94,7 +94,7 @@ a {
    left: 0;
    width: 100%;
    height: 2px;
-   background: var(--orange);
+   background: var(--accent);
 }
 
 .menu-toggle {
@@ -107,7 +107,7 @@ a {
 .menu-toggle span {
    width: 25px;
    height: 3px;
-   background: var(--cream);
+   background: var(--light);
    border-radius: 3px;
    transition: all 0.3s ease;
 }
@@ -115,7 +115,7 @@ a {
 /* ========== HERO SECTION ========== */
 .hero {
    height: 100vh;
-   background: linear-gradient(rgba(14, 98, 81, 0.4), rgba(14, 98, 81, 0.6)),
+   background: linear-gradient(rgba(44, 62, 80, 0.4), rgba(44, 62, 80, 0.6)),
                url('../img/hero.jpg') center/cover;
    display: flex;
    align-items: center;
@@ -141,7 +141,7 @@ a {
 .btn {
    display: inline-block;
    padding: 1rem 2.5rem;
-   background: var(--orange);
+   background: var(--accent);
    color: white;
    border-radius: 50px;
    font-weight: 600;
@@ -153,15 +153,15 @@ a {
 }
 
 .btn:hover {
-   background: #d68f00;
+   background: #C0392B;
    transform: translateY(-3px);
-   box-shadow: 0 10px 30px rgba(244, 163, 0, 0.3);
+   box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
 }
 
 /* ========== HIGHLIGHTS SECTION ========== */
 .highlights {
    padding: 5rem 2rem;
-   background: var(--cream);
+   background: var(--light);
 }
 
 .container {
@@ -172,7 +172,7 @@ a {
 .section-title {
    text-align: center;
    font-size: 2.5rem;
-   color: var(--teal);
+   color: var(--primary);
    margin-bottom: 3rem;
    position: relative;
 }
@@ -185,7 +185,7 @@ a {
    transform: translateX(-50%);
    width: 80px;
    height: 4px;
-   background: var(--orange);
+   background: var(--accent);
 }
 
 .highlight-cards {
@@ -220,7 +220,7 @@ a {
 
 .highlight-card h3 {
    font-size: 1.5rem;
-   color: var(--teal);
+   color: var(--primary);
    margin-bottom: 0.5rem;
 }
 
@@ -279,20 +279,20 @@ a {
    margin: 3rem auto 0 auto;
    font-weight: 600;
    text-decoration: none;
-   color: #F4A300;
+   color: var(--accent);
    transition: color 0.3s ease;
    text-align: center;
 }
 
 .see-all:hover {
-   color: #0E6251;
+   color: var(--primary);
 }
 
 
 /* ========== FOOTER ========== */
 .footer {
-   background: var(--teal);
-   color: var(--cream);
+   background: var(--primary);
+   color: var(--light);
    padding: 3rem 2rem 1rem;
 }
 
@@ -306,20 +306,20 @@ a {
 }
 
 .footer-section h3 {
-   color: var(--orange);
+   color: var(--accent);
    margin-bottom: 1rem;
 }
 
 .footer-section p,
 .footer-section a {
-   color: var(--cream);
+   color: var(--light);
    display: block;
    margin-bottom: 0.5rem;
    transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-   color: var(--orange);
+   color: var(--accent);
 }
 
 .social-links {
@@ -331,7 +331,7 @@ a {
 .social-links a {
    width: 40px;
    height: 40px;
-   background: var(--orange);
+   background: var(--accent);
    border-radius: 50%;
    display: flex;
    align-items: center;
@@ -340,15 +340,15 @@ a {
 }
 
 .social-links a:hover {
-   background: var(--cream);
-   color: var(--teal);
+   background: var(--light);
+   color: var(--primary);
    transform: translateY(-3px);
 }
 
 .footer-bottom {
    text-align: center;
    padding-top: 2rem;
-   border-top: 1px solid rgba(255, 248, 231, 0.2);
+   border-top: 1px solid rgba(236, 240, 241, 0.2);
 }
 
 /* ========== BACK TO TOP BUTTON ========== */
@@ -358,7 +358,7 @@ a {
    right: 30px;
    width: 50px;
    height: 50px;
-   background: var(--orange);
+   background: var(--accent);
    color: white;
    border: none;
    border-radius: 50%;
@@ -367,13 +367,13 @@ a {
    align-items: center;
    justify-content: center;
    font-size: 1.5rem;
-   box-shadow: 0 5px 20px rgba(244, 163, 0, 0.3);
+   box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
    transition: all 0.3s ease;
    z-index: 999;
 }
 
 .back-to-top:hover {
-   background: var(--teal);
+   background: var(--primary);
    transform: translateY(-5px);
 }
 
@@ -396,7 +396,7 @@ a {
 /* ========== PAGE HEADER ========== */
 .page-header {
    height: 40vh;
-   background: linear-gradient(rgba(14, 98, 81, 0.7), rgba(14, 98, 81, 0.7)),
+   background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
                url('https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=1600') center/cover;
    display: flex;
    align-items: center;
@@ -434,7 +434,7 @@ a {
 .icon-box {
    text-align: center;
    padding: 2rem;
-   background: var(--cream);
+   background: var(--light);
    border-radius: 15px;
    transition: all 0.3s ease;
 }
@@ -446,12 +446,12 @@ a {
 
 .icon-box .icon {
    font-size: 3rem;
-   color: var(--orange);
+   color: var(--accent);
    margin-bottom: 1rem;
 }
 
 .icon-box h3 {
-   color: var(--teal);
+   color: var(--primary);
    margin-bottom: 1rem;
 }
 
@@ -466,9 +466,9 @@ a {
 
 .filter-btn {
    padding: 0.8rem 2rem;
-   background: var(--cream);
-   color: var(--teal);
-   border: 2px solid var(--teal);
+   background: var(--light);
+   color: var(--primary);
+   border: 2px solid var(--primary);
    border-radius: 50px;
    cursor: pointer;
    transition: all 0.3s ease;
@@ -478,7 +478,7 @@ a {
 
 .filter-btn:hover,
 .filter-btn.active {
-   background: var(--teal);
+   background: var(--primary);
    color: white;
 }
 
@@ -573,12 +573,12 @@ a {
 
 .testimonial-author {
    font-size: 1.2rem;
-   color: var(--teal);
+   color: var(--primary);
    font-weight: 600;
 }
 
 .stars {
-   color: var(--orange);
+   color: var(--accent);
    font-size: 1.5rem;
    margin-top: 1rem;
 }
@@ -593,7 +593,7 @@ a {
 .testimonial-nav button {
    width: 50px;
    height: 50px;
-   background: var(--teal);
+   background: var(--primary);
    color: white;
    border: none;
    border-radius: 50%;
@@ -604,7 +604,7 @@ a {
 }
 
 .testimonial-nav button:hover {
-   background: var(--orange);
+   background: var(--accent);
 }
 
 /* ========== CONTACT FORM ========== */
@@ -615,7 +615,7 @@ a {
 }
 
 .contact-form {
-   background: var(--cream);
+   background: var(--light);
    padding: 2rem;
    border-radius: 15px;
 }
@@ -627,7 +627,7 @@ a {
 .form-group label {
    display: block;
    margin-bottom: 0.5rem;
-   color: var(--teal);
+   color: var(--primary);
    font-weight: 500;
 }
 
@@ -644,7 +644,7 @@ a {
 .form-group input:focus,
 .form-group textarea:focus {
    outline: none;
-   border-color: var(--teal);
+   border-color: var(--primary);
 }
 
 .form-group textarea {
@@ -654,7 +654,7 @@ a {
 
 .contact-info-box {
    padding: 2rem;
-   background: var(--cream);
+   background: var(--light);
    border-radius: 15px;
 }
 
@@ -663,7 +663,7 @@ a {
 }
 
 .contact-info-item h3 {
-   color: var(--teal);
+   color: var(--primary);
    margin-bottom: 0.5rem;
 }
 
@@ -697,7 +697,7 @@ a {
 }
 
 .experience-item {
-   background: var(--cream);
+   background: var(--light);
    border-radius: 15px;
    overflow: hidden;
 }
@@ -713,7 +713,7 @@ a {
 }
 
 .experience-item h3 {
-   color: var(--teal);
+   color: var(--primary);
    margin-bottom: 1rem;
    font-size: 1.5rem;
 }
@@ -725,7 +725,7 @@ a {
        left: -100%;
        top: 70px;
        flex-direction: column;
-       background: var(--teal);
+       background: var(--primary);
        width: 100%;
        text-align: center;
        transition: 0.3s;

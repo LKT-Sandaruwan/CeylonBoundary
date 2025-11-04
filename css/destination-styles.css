@@ -187,7 +187,7 @@ a {
 
 .travel-notes li:hover {
    transform: translateX(10px);
-   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .travel-notes strong {
@@ -212,7 +212,7 @@ a {
 
 .attraction-card:hover {
    transform: translateY(-10px);
-   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
    border-left-color: var(--orange);
 }
 
@@ -254,7 +254,7 @@ a {
 
 .distance-item:hover {
    transform: translateX(10px);
-   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .distance-item .icon {
@@ -292,7 +292,7 @@ a {
 .restaurant-item:hover {
    border-color: var(--orange);
    transform: translateY(-5px);
-   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .restaurant-item h3 {
@@ -330,7 +330,7 @@ a {
 
 .hotel-item:hover {
    transform: translateY(-5px);
-   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
    border-left-color: var(--orange);
 }
 
@@ -384,48 +384,48 @@ a {
    background: white;
    color: var(--teal);
    transform: translateY(-5px);
-   box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
    .hero-content h1 {
-       font-size: 2.5rem;
+      font-size: 2.5rem;
    }
 
    .hero-content p {
-       font-size: 1.2rem;
+      font-size: 1.2rem;
    }
 
    .slider-btn {
-       font-size: 2rem;
-       padding: 0.5rem 1rem;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
    }
 
    .prev-btn {
-       left: 10px;
+      left: 10px;
    }
 
    .next-btn {
-       right: 10px;
+      right: 10px;
    }
 
    .info-section h2 {
-       font-size: 1.5rem;
+      font-size: 1.5rem;
    }
 
    .attractions-grid,
    .restaurant-list,
    .accommodation-list {
-       grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
    }
 
    .cta-section h2 {
-       font-size: 2rem;
+      font-size: 2rem;
    }
 
    .cta-section p {
-       font-size: 1rem;
+      font-size: 1rem;
    }
 }

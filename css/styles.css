@@ -765,13 +765,42 @@ a {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   height: 100%;
-   background: #fff;
+   padding-bottom: 5rem;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: #fff;
+   overflow: hidden;
    border-radius: 16px;
    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
    overflow: hidden;
    transition: all 0.3s ease;
    padding: 2rem;
+}
+
+/* Hide the img tag since we’ll use it as background */
+.package-card img {
+   display: none;
+}
+
+/* Dark overlay */
+.package-card::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.65);
+   /* adjust transparency here */
+   z-index: 1;
+}
+
+/* Text & content stay above overlay */
+.package-card>* {
+   position: relative;
+   z-index: 2;
 }
 
 .package-card:hover {
@@ -809,7 +838,7 @@ a {
 
 .package-section h4 {
    font-size: 1.3rem;
-   color: var(--primary, #1e3a8a);
+   color: var(--light);
    margin-bottom: 1rem;
    position: relative;
    font-weight: 600;
@@ -834,7 +863,7 @@ a {
 
 .package-section ul li {
    margin-bottom: 0.6rem;
-   color: var(--gray, #475569);
+   color: var(--light, #ECF0F1);
    position: relative;
    padding-left: 1.4rem;
    line-height: 1.6;
@@ -851,14 +880,14 @@ a {
 /* Contact Info Box */
 .package-contact {
    flex-grow: 1;
-   background: #f9fafb;
+   background: rgba(254, 254, 254, 0.2);
    padding: 1.5rem;
    border-radius: 10px;
    border-left: 5px solid var(--accent, #f59e0b);
 }
 
 .package-contact p {
-   color: var(--dark, #0f172a);
+   color: var(--light);
    margin-bottom: 0.5rem;
    font-size: 1rem;
 }
@@ -870,7 +899,7 @@ a {
 }
 
 .package-contact a:hover {
-   color: var(--primary, #1e3a8a);
+   color: var(--light);
    text-decoration: underline;
 }
 

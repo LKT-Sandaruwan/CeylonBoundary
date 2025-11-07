@@ -725,6 +725,220 @@ a {
    font-size: 1.5rem;
 }
 
+/* ========== EXCLUSIVE TOUR PACKAGES SECTION ========== */
+.packages {
+   padding: 5rem 2rem;
+   background: var(--light-gray, #f8fafc);
+}
+
+/* Section Title */
+.packages .section-title {
+   text-align: center;
+   font-size: 2.5rem;
+   color: var(--primary, #1e3a8a);
+   margin-bottom: 3rem;
+   position: relative;
+   font-weight: 700;
+}
+
+.packages .section-title::after {
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80px;
+   height: 4px;
+   background: var(--accent, #f59e0b);
+   border-radius: 2px;
+}
+
+/* Container Grid Layout */
+.packages-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2.5rem;
+}
+
+/* Package Card */
+.package-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   background: #fff;
+   border-radius: 16px;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+   overflow: hidden;
+   transition: all 0.3s ease;
+   padding: 2rem;
+}
+
+.package-card:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.package-header {
+   background: var(--primary, #1e3a8a);
+   color: #fff;
+   padding: 1.5rem;
+   border-radius: 12px;
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.package-header h3 {
+   font-size: 1.8rem;
+   color: var(--accent, #fbbf24);
+   margin-bottom: 0.5rem;
+   font-weight: 700;
+}
+
+.package-header p {
+   font-size: 1.05rem;
+   color: #f1f5f9;
+   opacity: 0.95;
+}
+
+/* Sections inside cards */
+.package-section {
+   margin-bottom: 2rem;
+}
+
+.package-section h4 {
+   font-size: 1.3rem;
+   color: var(--primary, #1e3a8a);
+   margin-bottom: 1rem;
+   position: relative;
+   font-weight: 600;
+}
+
+.package-section h4::after {
+   content: '';
+   position: absolute;
+   bottom: -6px;
+   left: 0;
+   width: 60px;
+   height: 3px;
+   background: var(--accent, #f59e0b);
+   border-radius: 2px;
+}
+
+.package-section ul {
+   list-style: none;
+   padding-left: 1.2rem;
+   margin-top: 1rem;
+}
+
+.package-section ul li {
+   margin-bottom: 0.6rem;
+   color: var(--gray, #475569);
+   position: relative;
+   padding-left: 1.4rem;
+   line-height: 1.6;
+}
+
+.package-section ul li::before {
+   content: '✓';
+   position: absolute;
+   left: 0;
+   color: var(--accent, #f59e0b);
+   font-weight: bold;
+}
+
+/* Contact Info Box */
+.package-contact {
+   flex-grow: 1;
+   background: #f9fafb;
+   padding: 1.5rem;
+   border-radius: 10px;
+   border-left: 5px solid var(--accent, #f59e0b);
+}
+
+.package-contact p {
+   color: var(--dark, #0f172a);
+   margin-bottom: 0.5rem;
+   font-size: 1rem;
+}
+
+.package-contact a {
+   color: var(--accent, #f59e0b);
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.package-contact a:hover {
+   color: var(--primary, #1e3a8a);
+   text-decoration: underline;
+}
+
+/* ========== PACKAGE FOOTER & BUTTON ========== */
+.package-footer {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+.btn-book {
+   display: inline-block;
+   background: var(--accent, #f59e0b);
+   color: #fff;
+   padding: 0.9rem 2rem;
+   border: none;
+   border-radius: 50px;
+   font-size: 1rem;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-book:hover {
+   background: var(--primary, #1e3a8a);
+   color: #fff;
+   transform: translateY(-3px);
+   box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4);
+}
+
+.btn-book:active {
+   transform: translateY(0);
+   box-shadow: 0 3px 10px rgba(30, 58, 138, 0.3);
+}
+
+/* Mobile full-width button */
+@media (max-width: 768px) {
+   .btn-book {
+      display: block;
+      width: 100%;
+   }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+   .packages-container {
+      grid-template-columns: 1fr;
+   }
+
+   .package-card {
+      padding: 1.8rem;
+   }
+
+   .package-header h3 {
+      font-size: 1.6rem;
+   }
+
+   .package-section h4 {
+      font-size: 1.1rem;
+   }
+
+   .package-section ul li {
+      font-size: 0.95rem;
+   }
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
    .nav-menu {
